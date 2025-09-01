@@ -1,14 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-// Define the schema for a Person
+// Define the schema for Person
 const personSchema = new mongoose.Schema({
-  name: { type: String, required: true }, // name is required
-  age: Number,
+  name: { type: String, required: true }, // required field
+  age: { type: Number },
   favoriteFoods: [String], // array of strings
 });
 
-// Create the model from the schema
-const Person = mongoose.model('Person', personSchema);
+// Create model
+const Person = mongoose.model("Person", personSchema);
 
-// Export the model
 module.exports = Person;
